@@ -28,11 +28,13 @@ public class ClientController {
 	@Autowired
 	private IClientService clientService;
 
+
 	@GetMapping("/page")
 	@PreAuthorize("hasAuthority('admin')")
 	@ApiOperation(value = "分页获取客户端列表", notes = "需要accessToken，需要管理员权限")
 	public ApiResponseResult<Page<Client>> page(@ApiParam("页码") @RequestParam(value = "current", required = false, defaultValue = "1") long current,
 												@ApiParam("每页数量") @RequestParam(value = "size", required = false, defaultValue = "5") long size) {
+
 		return ApiResponseResult.success(clientService.getUserListWithPagination(current, size));
 	}
 

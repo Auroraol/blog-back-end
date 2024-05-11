@@ -6,9 +6,6 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.regex.Pattern;
 
-/**
- *
- */
 public class IsPhoneValidator implements ConstraintValidator<IsPhone, Object> {
 
 	private boolean required;
