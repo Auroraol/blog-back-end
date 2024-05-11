@@ -13,8 +13,6 @@ import java.lang.annotation.*;
 /**
  * 集合长度
  *
- *
- *  2019-11-13 11:02
  **/
 @Documented
 @Target({ElementType.FIELD, ElementType.PARAMETER})

@@ -8,8 +8,6 @@ import java.lang.annotation.*;
 
 /**
  * yyyy-mm,年月格式校验
- * <p>
- * 2019-11-28 09:23
  **/
 @Documented
 @Target({ElementType.FIELD, ElementType.PARAMETER})

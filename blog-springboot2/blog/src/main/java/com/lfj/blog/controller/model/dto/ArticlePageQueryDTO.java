@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 2019-11-28 19:17
+ * 分页查询DTO
  **/
 @Data
 @NoArgsConstructor

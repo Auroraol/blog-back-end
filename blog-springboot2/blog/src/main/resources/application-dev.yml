@@ -5,7 +5,6 @@ spring:
   mvc:
     pathmatch:
       # 设置path匹配策略，解决springfox启动空指针异常问题，
-      # 具体参见：https://blog.csdn.net/Faint35799/article/details/122344731
       matching-strategy: ant_path_matcher
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -48,19 +47,17 @@ spring:
           ssl:
             enable: true
 
-
 # 加密配置
 jasypt:
   encryptor:
-    password: 35579B7F9C8CB15E  #加解密的密钥，自定义即可，必填项
-    algorithm: PBEWithMD5AndDES  #指定解密算法，加解密必须一致. # 加密算法,jasypt3.0后，默认支持的算法为 PBEWITHHMACSHA512ANDAES_256 ，该算法需要JDK1.9 以上支持或者添加JCE(Java Cryptography Extension 无限强度权限策略文件)支持
-    string-output-type: base64  #设置加密内容输出的编码形式，可用的编码类型有 base64(默认值)、hexadecimal（16进制）
+    password: 35579B7F9C8CB15E #加解密的密钥，自定义即可，必填项
+    algorithm: PBEWithMD5AndDES #指定解密算法，加解密必须一致. # 加密算法,jasypt3.0后，默认支持的算法为 PBEWITHHMACSHA512ANDAES_256 ，该算法需要JDK1.9 以上支持或者添加JCE(Java Cryptography Extension 无限强度权限策略文件)支持
+    string-output-type: base64 #设置加密内容输出的编码形式，可用的编码类型有 base64(默认值)、hexadecimal（16进制）
     poolSize: 3
     property:
       #自定义的前后缀标记，默认ENC()
       prefix: CODE(
       suffix: )
-
 
 # 第三方登录
 oauth:
@@ -70,23 +67,21 @@ oauth:
   gitee:
     clientId: 62d3af1f2058b5facec5316ab9d18b8d3602406fcb704adde7f5b38de381996b
     clientSecret: CODE(rw/GXQuZ29GhgiFutLZebU3gXKvU79FlUYp9guzb9McJSPAZQRYVYmLPHeOObFdb+Q25M9Cs8n1KbcIYKT4rvj0u+6UNiUweySKi94X+sjc=)
-    redirect_uri: https://www.poile.cn/oauth  #TODO 修改
+    redirect_uri: https://www.poile.cn/oauth #TODO 修改
   qq:
     appId: appid
     clientId: clientId
     clientSecret: clientSecret
     redirect_uri: https://www.poile.cn/oauth
 
-
 # 邮件中的链接配置，按需求配置
 mail:
   # 邮箱绑定时发送的验证链接前缀
-  check: http://localhost:9000/user/email/bind   #验证邮箱url请求
+  check: http://localhost:9000/user/email/bind #验证邮箱url请求
   # 文章详情前缀，文章评论邮件提醒的链接前缀
   article: http://www.poile.cn/article/#/
   # 留言邮件提醒留言版页面链接
   message: http://www.poile.cn/message
-
 
 # 手机短信
 sms:
@@ -98,11 +93,11 @@ sms:
   day_max: 10
   # 阿里短信配置
   ali:
-    regionId: cn-hangzhou         # 地区编号
-    accessKeyId: CODE(gVhIxdO2/l2vGJFNsywZvTWsR3tJVPrmtGGQ4kjvU6WoU5UjOFmVqA==)            # 子用户的访问键
-    accessKeySecret: CODE(DonDv1E1bt18WPvlxngorolpvxeJnfoUNk8X94+42sqEeBAmzAaaIg==)  # 子用户的访问密钥
-    signName: 悦读博客              # 签名名称
-    templateCode: SMS_465896038    # 登录短信模板的code
+    regionId: cn-hangzhou # 地区编号
+    accessKeyId: CODE(gVhIxdO2/l2vGJFNsywZvTWsR3tJVPrmtGGQ4kjvU6WoU5UjOFmVqA==) # 子用户的访问键
+    accessKeySecret: CODE(DonDv1E1bt18WPvlxngorolpvxeJnfoUNk8X94+42sqEeBAmzAaaIg==) # 子用户的访问密钥
+    signName: 悦读博客 # 签名名称
+    templateCode: SMS_465896038 # 登录短信模板的code
   # 腾讯短信配置
   tencent:
     appId: 14001859
@@ -110,14 +105,12 @@ sms:
     templateId: 608484
     signName: 个人阅读分享网
 
-
-
 # 存储配置，配置其一即可，类型需要严格匹配
 oss:
   ## 存储类型, 1: 本地  2：七牛  3：网易云 4: 阿里云
   type: 4
   local:
-    path: D:/blog/        #文件保存根路径
+    path: D:/blog/ #文件保存根路径
     proxy: http://localhost:9000/ #公网url + 虚拟路径, 这个虚拟路径需要于文件保存根路径映射 #通过WebMvcConfig.java
     virtualPath: files
   # 网易云存储配置
@@ -145,7 +138,6 @@ logging:
   level:
     cn.poile.blog.mapper: DEBUG
     org.springframework.security: DEBUG
-
 
 # 开发环境 开始swagger
 swagger:

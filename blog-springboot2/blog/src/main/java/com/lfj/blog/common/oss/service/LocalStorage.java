@@ -18,8 +18,6 @@ import java.io.InputStream;
 /**
  * 本地 存储
  *
- * @author: yaohw
- * @create: 2019-10-31 19:50
  **/
 @Log4j2
 public class LocalStorage extends AbstractStorage {

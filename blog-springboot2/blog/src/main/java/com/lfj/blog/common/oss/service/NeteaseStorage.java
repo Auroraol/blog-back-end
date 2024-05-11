@@ -25,8 +25,6 @@ import java.io.InputStream;
 /**
  * 网易云 存储
  *
- * @author: yaohw
- * @create: 2019-10-31 11:41
  **/
 @Log4j2
 public class NeteaseStorage extends AbstractStorage {

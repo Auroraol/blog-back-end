@@ -13,12 +13,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
- * <p>
  * 文章回复表 前端控制器
- * </p>
  *
- * @author yaohw
- * @since 2019-12-03
  */
 @RestController
 @RequestMapping("/article/reply")

@@ -8,8 +8,6 @@ import java.lang.annotation.*;
 
 /**
  * 是否类型文件类型为图片注解
- * <p>
- * 2019-11-13 11:02
  **/
 @Documented
 @Target({ElementType.FIELD, ElementType.PARAMETER})
