@@ -43,8 +43,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 限流切面
- * <p>
- * 2019/11/5 10:49 下午
  */
 @Log4j2
 @Aspect

@@ -6,8 +6,6 @@ import lombok.Data;
 /**
  * 上一篇和下一篇文章DTO
  *
- * @author: yaohw
- * @create: 2019-11-26 19:21
  **/
 @Data
 public class PreArtAndNextArtDTO {

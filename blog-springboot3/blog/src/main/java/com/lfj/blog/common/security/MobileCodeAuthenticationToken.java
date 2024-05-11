@@ -7,8 +7,6 @@ import java.util.Collection;
 
 /**
  * 手机号短信验证码 AuthenticationToken
- * <p>
- * 2019-11-07 16:48
  **/
 public class MobileCodeAuthenticationToken extends AbstractAuthenticationToken {
 

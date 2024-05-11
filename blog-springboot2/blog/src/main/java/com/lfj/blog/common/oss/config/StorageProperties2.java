@@ -6,8 +6,6 @@
 ///**
 // * oss 存储配置
 // *
-// * @author: yaohw
-// * @create: 2019-10-30 18:57
 // **/
 //@Data
 //@ConfigurationProperties(prefix = "oss")

@@ -7,8 +7,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 接口限流注解
- * <p>
- * 2019/11/5 10:28 下午
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

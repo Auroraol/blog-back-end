@@ -4,8 +4,6 @@ import java.util.regex.Pattern;
 
 /**
  * 校验工具类
- * <p>
- * 2019-10-28 18:51
  **/
 public class ValidateUtil {
 

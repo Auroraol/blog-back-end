@@ -20,9 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 2020-05-20 14:22
- **/
 @Log4j2
 public class HttpClientUtil {
 

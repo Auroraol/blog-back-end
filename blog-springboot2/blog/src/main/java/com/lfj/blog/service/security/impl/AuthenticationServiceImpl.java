@@ -15,9 +15,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 
-/**
- * 2019-10-28 18:27
- **/
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
 

@@ -1,9 +1,5 @@
 package com.lfj.blog.common.validator.annotation;
 
-/**
- * 2019-11-15 15:23
- **/
-
 import com.lfj.blog.common.validator.ListSizeValidator;
 
 import javax.validation.Constraint;

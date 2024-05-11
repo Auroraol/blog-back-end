@@ -4,9 +4,6 @@ package com.lfj.blog.service.security;
 import com.lfj.blog.common.security.token.AuthenticationToken;
 import com.lfj.blog.entity.Client;
 
-/**
- * 2019-10-28 17:51
- **/
 public interface AuthenticationService {
 	/**
 	 * 用户名或手机号密码认证

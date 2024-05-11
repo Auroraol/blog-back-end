@@ -7,9 +7,6 @@ import jakarta.validation.ConstraintValidatorContext;
 
 import java.util.regex.Pattern;
 
-/**
- * 2019-11-28 09:24
- **/
 public class YearMonthFormatValidator implements ConstraintValidator<YearMonthFormat, String> {
 
 	private boolean required;

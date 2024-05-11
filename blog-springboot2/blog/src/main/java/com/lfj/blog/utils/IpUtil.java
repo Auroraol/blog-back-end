@@ -7,9 +7,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * 2019-11-23 10:12
- **/
 @Log4j2
 public class IpUtil {
 

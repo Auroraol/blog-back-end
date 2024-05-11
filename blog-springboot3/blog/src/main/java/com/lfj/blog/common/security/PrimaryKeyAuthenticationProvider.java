@@ -21,7 +21,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 /**
  * 主键认证提供者，不做密码校验
  * 用于第三方登录根据主键查询用户
- * <p>
  **/
 public class PrimaryKeyAuthenticationProvider implements AuthenticationProvider, MessageSourceAware {
 

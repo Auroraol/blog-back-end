@@ -1,7 +1,7 @@
 package com.lfj.blog.common.constant;
 
 /**
- *
+ * 回复状态
  **/
 public class CommonConstant {
 

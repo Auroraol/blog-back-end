@@ -4,9 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * 2019-11-28 19:17
- **/
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

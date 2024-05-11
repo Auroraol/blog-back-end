@@ -4,9 +4,6 @@ import lombok.Data;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * 2019-11-23 10:20
- **/
 @Data
 public class Limit {
 

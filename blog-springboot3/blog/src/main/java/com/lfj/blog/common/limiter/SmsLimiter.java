@@ -21,8 +21,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 短信接口附加限流,ip限流，同一手机号一天内限流
- * <p>
- * 2019-11-22 17:35
  **/
 public class SmsLimiter implements ExtraLimiter {
 
