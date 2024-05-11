@@ -80,7 +80,6 @@ public class IClientServiceImpl extends ServiceImpl<ClientMapper, Client>
 	public Page<Client> getUserListWithPagination(long current, long size) {
 		// 创建分页对象
 		Page<Client> page = new Page<>(current, size);
-
 		// 第一个参数是分页对象，第二个参数是查询条件（可以是 QueryWrapper 等）
 		// selectPage 方法会在查询时自动添加分页条件，并返回分页查询结果
 		return clientMapper.selectPage(page, null);

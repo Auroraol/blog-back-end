@@ -6,9 +6,6 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.List;
 
-/**
- * 2019-11-15 15:25
- **/
 public class ListSizeValidator implements ConstraintValidator<ListSize, List> {
 
 	private int min = -1;

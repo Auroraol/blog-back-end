@@ -33,8 +33,6 @@ import java.util.UUID;
 
 /**
  * accessToken 生成、存储(通过Redis)
- * <p>
- * 2019-10-28 17:48
  **/
 @Log4j2
 @Component

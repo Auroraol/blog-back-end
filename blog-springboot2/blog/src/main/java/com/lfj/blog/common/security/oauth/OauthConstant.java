@@ -1,7 +1,7 @@
 package com.lfj.blog.common.security.oauth;
 
 /**
- *
+ * 第三方登录链接
  **/
 public class OauthConstant {
 
