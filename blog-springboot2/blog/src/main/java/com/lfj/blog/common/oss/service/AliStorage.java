@@ -2,6 +2,8 @@ package com.lfj.blog.common.oss.service;
 
 
 import com.aliyun.oss.OSSClient;
+import com.aliyun.oss.model.CannedAccessControlList;
+import com.aliyun.oss.model.CreateBucketRequest;
 import com.aliyun.oss.model.ObjectMetadata;
 import com.lfj.blog.common.oss.AbstractStorage;
 import com.lfj.blog.common.oss.PageStorageObject;
@@ -20,17 +22,40 @@ import java.io.InputStream;
 @Log4j2
 public class AliStorage extends AbstractStorage {
 
+	/*私有
+	 * 只允许自己读写操作，其他用户没有权限
+	 */
+	CannedAccessControlList acl_private = CannedAccessControlList.Private;
+	/*公共读写
+	 * 允许自己和其他用户读写操作
+	 */
+	CannedAccessControlList acl_pub_readwrite = CannedAccessControlList.PublicReadWrite;
+	/*公共读
+	 * 只允许自己进行写操作，但是允许自己及其他用户进行读操作
+	 */
+	CannedAccessControlList acl_pub_red = CannedAccessControlList.PublicRead;
+
 	private OSSClient client;
-
 	private String endpoint;
-
 	private String bucket;
 
 	public AliStorage(StorageProperties.Ali ali) {
 		this.bucket = ali.getBucket();
 		this.endpoint = ali.getEndpoint();
 		client = new OSSClient(this.endpoint, ali.getAccessKeyId(), ali.getAccessKeyIdSecret());
+		createBucket(client, bucket, acl_pub_readwrite);  //Bucket ACL 设置为公共读写
 	}
+
+	public static void createBucket(OSSClient client, String bucketName,
+									CannedAccessControlList acl) {
+		/* 通过一个Bucket对象来创建 */
+		CreateBucketRequest bucketObj = new CreateBucketRequest(null);// 构造函数入参为Bucket名称，可以为空
+		bucketObj.setBucketName(bucketName);// 设置bucketObj名称
+		bucketObj.setCannedACL(acl);// 设置bucketObj访问权限acl
+		client.createBucket(bucketObj);// 创建Bucket
+
+	}
+
 
 	/**
 	 * 文件上传
@@ -57,6 +82,7 @@ public class AliStorage extends AbstractStorage {
 	public String upload(InputStream inputStream, String path, String contentType) {
 		ObjectMetadata metadata = new ObjectMetadata();
 		metadata.setContentType(contentType);
+
 		client.putObject(bucket, path, inputStream, metadata);
 		return "https://" + bucket + "." + endpoint + "/" + path;
 	}

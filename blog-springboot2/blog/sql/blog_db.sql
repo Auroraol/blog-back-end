@@ -196,3 +196,11 @@ CREATE TABLE `user` (
   KEY `index` (`mobile`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 11 DEFAULT CHARSET = utf8mb4 COMMENT = '用户表';
 SET FOREIGN_KEY_CHECKS = 1;
+
+
+CREATE TABLE chat_room (
+   `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   `name` VARCHAR(255) NOT NULL,
+   `chat_logs` JSON,
+   `del_root` BOOLEAN NOT NULL
+);

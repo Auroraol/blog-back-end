@@ -22,6 +22,7 @@ import com.lfj.blog.exception.ApiException;
 import com.lfj.blog.mapper.UserMapper;
 import com.lfj.blog.service.IUserService;
 import com.lfj.blog.service.security.biz.EmailService;
+import com.lfj.blog.service.vo.ChatUserInfoVo;
 import com.lfj.blog.utils.RandomValueStringGenerator;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -459,7 +460,7 @@ public class IUserServiceImpl extends ServiceImpl<UserMapper, User>
 		}
 	}
 
-	
+
 	/**
 	 * 分页查询用户
 	 *
@@ -507,6 +508,22 @@ public class IUserServiceImpl extends ServiceImpl<UserMapper, User>
 
 		// 清空用户缓存
 		tokenStore.clearUserCacheById(userId);
+	}
+
+	@Override
+	public ChatUserInfoVo chatUserInfo(String username) {
+		QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+		queryWrapper.lambda().eq(User::getUsername, username);
+		User one = this.getOne(queryWrapper, false);
+		if (one == null) {
+			throw new ApiException(ResponseCodeEnum.ACCOUNT_NOT_FOUND.getCode(), "用户不存在");
+		}
+
+		ChatUserInfoVo chatUserInfoVo = new ChatUserInfoVo();
+		chatUserInfoVo.setAvatar(one.getAvatar());
+		chatUserInfoVo.setNickname(one.getNickname());
+
+		return chatUserInfoVo;
 	}
 
 	/**

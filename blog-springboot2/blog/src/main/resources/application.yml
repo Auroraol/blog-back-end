@@ -25,6 +25,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     #    cache-enabled: true   # mybatis-plus二级缓存
     map-underscore-to-camel-case: true  #开启MyBatis的下划线命名到驼峰命名的自动映射功能
+  type-handlers-package: com.lfj.blog.config.mybatis.handler  #增加此项配置
 
 # 忽略安全校验url列表，不可修改
 ignore:
@@ -67,3 +68,5 @@ ignore:
     - /leave/message/latest
     - /oauth
     - /files/**
+    - /socket.io/**
+    - /chat/**

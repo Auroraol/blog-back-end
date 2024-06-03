@@ -153,4 +153,11 @@ public class UserController {
 		return ApiResponseResult.success();
 	}
 
+	// 根据username查询用户信息
+	@GetMapping("/chat/info")
+	@ApiOperation(value = "获取用户信息", notes = "需要传用户账号")
+	public ApiResponseResult<Object> info(@RequestParam String username) {
+		return ApiResponseResult.success(userService.chatUserInfo(username));
+	}
+
 }

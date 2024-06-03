@@ -6,6 +6,7 @@ import com.lfj.blog.common.security.details.vo.UserVo;
 import com.lfj.blog.controller.model.request.UpdateUserRequest;
 import com.lfj.blog.controller.model.request.UserRegisterRequest;
 import com.lfj.blog.entity.User;
+import com.lfj.blog.service.vo.ChatUserInfoVo;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -146,6 +147,13 @@ public interface IUserService extends IService<User> {
 	 * @param status
 	 */
 	void status(Integer userId, Integer status);
-//
+
+
+	/**
+	 * 返回头像和昵称
+	 *
+	 * @param username
+	 */
+	ChatUserInfoVo chatUserInfo(String username);
 
 }

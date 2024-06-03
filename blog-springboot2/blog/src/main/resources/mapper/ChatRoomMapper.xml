@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lfj.blog.mapper.ChatRoomMapper">
+
+    <resultMap id="BaseResultMap" type="com.lfj.blog.entity.ChatRoom">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="chatLogs" column="chat_logs" jdbcType="OTHER"
+                typeHandler="com.lfj.blog.config.mybatis.handler.JsonStringArrayTypeHandler"
+        />
+        <result property="delRoot" column="del_root" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,name,chat_logs,
+        del_root
+    </sql>
+    <select id="searchAllByName" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from chat_room
+        where
+        name = #{name,jdbcType=VARCHAR}
+    </select>
+</mapper>
