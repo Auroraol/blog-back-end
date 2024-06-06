@@ -25,6 +25,7 @@ public class SocketIoConfig {
 		com.corundumstudio.socketio.Configuration config =
 				new com.corundumstudio.socketio.Configuration();
 		config.setOrigin(null);   // 注意如果开放跨域设置，需要设置为null而不是"*"
+		config.setHostname(socketIOProperties.getHost());
 		// 配置端口
 		config.setPort(socketIOProperties.getPort());
 		// 开启Socket端口复用

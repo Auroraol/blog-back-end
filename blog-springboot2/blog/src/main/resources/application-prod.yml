@@ -122,7 +122,7 @@ socketio:
   host: 0.0.0.0
   # SocketIO端口
   port: 9974
-  #  namespaces: /chat,/test
+  #  namespaces: /Chat,/Test
   namespaces: /Chat
   # 设置最大每帧处理数据的长度，防止他人利用大数据来攻击服务器
   maxFramePayloadLength: 1048576

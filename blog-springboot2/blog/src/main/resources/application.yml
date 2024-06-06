@@ -68,5 +68,3 @@ ignore:
     - /leave/message/latest
     - /oauth
     - /files/**
-    - /socket.io/**
-    - /chat/**

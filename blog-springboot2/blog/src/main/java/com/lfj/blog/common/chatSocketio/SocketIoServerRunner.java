@@ -7,6 +7,7 @@ import com.lfj.blog.utils.SpringContextUtil;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -19,7 +20,7 @@ import java.util.Optional;
  * 这里为每个命名空间注册一个事件处理Handler, 规则为bean的name为命名空间名称+MessageHandler。
  */
 @Component
-//@Order(1)
+@Order(1)
 @Log4j2
 public class SocketIoServerRunner implements CommandLineRunner {
 	@Autowired
@@ -50,6 +51,7 @@ public class SocketIoServerRunner implements CommandLineRunner {
 						}
 					}));
 			socketIOServer.start();
+			log.info("socketIO启动成功");
 		}
 	}
 }

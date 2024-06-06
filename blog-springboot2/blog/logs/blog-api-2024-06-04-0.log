@@ -1,0 +1,149 @@
+2024-06-04 14:56:12.536 [ background-preinit ] - [ INFO  ] [ org.hibernate.validator.internal.util.Version : 21 ] - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-04 14:56:12.704 [ main ] - [ INFO  ] [ com.lfj.blog.WebBasicApplication : 55 ] - Starting WebBasicApplication using Java 1.8.0_333 on Vicissitudes with PID 58400 (C:\Users\16658\Documents\GitHub\blog-back-end\blog-springboot2\blog\target\classes started by 16658 in C:\Users\16658\Documents\GitHub\blog-back-end\blog-springboot2\blog)
+2024-06-04 14:56:12.714 [ main ] - [ INFO  ] [ com.lfj.blog.WebBasicApplication : 637 ] - The following 1 profile is active: "prod"
+2024-06-04 14:56:29.703 [ main ] - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 262 ] - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-04 14:56:29.712 [ main ] - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 132 ] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-04 14:56:30.567 [ main ] - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 201 ] - Finished Spring Data repository scanning in 807 ms. Found 0 Redis repository interfaces.
+2024-06-04 14:56:35.142 [ main ] - [ INFO  ] [ c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor : 50 ] - Post-processing PropertySource instances
+2024-06-04 14:56:35.733 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2024-06-04 14:56:35.739 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2024-06-04 14:56:35.741 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2024-06-04 14:56:35.743 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2024-06-04 14:56:35.746 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2024-06-04 14:56:35.751 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2024-06-04 14:56:35.753 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource Config resource 'class path resource [application-prod.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-06-04 14:56:35.753 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-06-04 14:56:36.619 [ main ] - [ INFO  ] [ c.u.j.filter.DefaultLazyPropertyFilter : 31 ] - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2024-06-04 14:56:40.956 [ main ] - [ INFO  ] [ c.u.j.resolver.DefaultLazyPropertyResolver : 31 ] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2024-06-04 14:56:40.966 [ main ] - [ INFO  ] [ c.u.j.detector.DefaultLazyPropertyDetector : 30 ] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2024-06-04 14:56:40.978 [ main ] - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 376 ] - Bean 'socketIoProperties' of type [com.lfj.blog.common.chatSocketio.config.SocketIoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-04 14:56:41.007 [ main ] - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 376 ] - Bean 'socketIoConfig' of type [com.lfj.blog.common.chatSocketio.config.SocketIoConfig$$EnhancerBySpringCGLIB$$55661a69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-04 14:56:41.948 [ main ] - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 376 ] - Bean 'socketIOServer' of type [com.corundumstudio.socketio.SocketIOServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-04 14:56:44.710 [ main ] - [ INFO  ] [ o.s.boot.web.embedded.tomcat.TomcatWebServer : 108 ] - Tomcat initialized with port(s): 9090 (http)
+2024-06-04 14:56:44.766 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9090"]
+2024-06-04 14:56:44.772 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-06-04 14:56:44.773 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-06-04 14:56:48.430 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-06-04 14:56:48.433 [ main ] - [ INFO  ] [ o.s.b.w.s.c.ServletWebServerApplicationContext : 292 ] - Root WebApplicationContext: initialization completed in 35218 ms
+2024-06-04 14:56:48.764 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 32 ] - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2024-06-04 14:56:48.780 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2024-06-04 14:56:48.782 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2024-06-04 14:56:48.783 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2024-06-04 14:56:48.784 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2024-06-04 14:56:48.787 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2024-06-04 14:56:52.975 [ main ] - [ INFO  ] [ org.redisson.Version : 41 ] - Redisson 3.17.0
+2024-06-04 14:56:59.241 [ redisson-netty-2-32 ] - [ INFO  ] [ o.r.connection.pool.MasterPubSubConnectionPool : 161 ] - 1 connections initialized for 101.37.165.220/101.37.165.220:6379
+2024-06-04 14:56:59.449 [ redisson-netty-2-19 ] - [ INFO  ] [ org.redisson.connection.pool.MasterConnectionPool : 161 ] - 24 connections initialized for 101.37.165.220/101.37.165.220:6379
+2024-06-04 14:57:08.789 [ main ] - [ INFO  ] [ c.c.socketio.annotation.SpringAnnotationScanner : 58 ] - chatMessageEventHandler bean listeners added
+2024-06-04 14:57:09.853 [ main ] - [ INFO  ] [ c.lfj.blog.common.limiter.aspect.RateLimiterAspect : 79 ] - RateLimterAspect[分布式限流处理器]脚本加载完成
+2024-06-04 14:57:10.547 [ main ] - [ WARN  ] [ org.thymeleaf.templatemode.TemplateMode : 150 ] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2024-06-04 14:57:18.690 [ main ] - [ INFO  ] [ o.s.b.actuate.endpoint.web.EndpointLinksResolver : 58 ] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-06-04 14:57:20.376 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/*.html', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 14:57:20.381 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/*.html', GET]
+2024-06-04 14:57:20.383 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/favicon.ico', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 14:57:20.385 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/favicon.ico', GET]
+2024-06-04 14:57:20.385 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/**/*.html', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 14:57:20.387 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/**/*.html', GET]
+2024-06-04 14:57:20.388 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/**/*.css', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 14:57:20.388 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/**/*.css', GET]
+2024-06-04 14:57:20.389 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/**/*.js', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 14:57:20.392 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/**/*.js', GET]
+2024-06-04 14:57:21.088 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 55 ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39f8adc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c7269ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@14eb96e9, org.springframework.security.web.header.HeaderWriterFilter@94aeba1, org.springframework.web.filter.CorsFilter@1c23e369, org.springframework.security.web.authentication.logout.LogoutFilter@36d39655, com.lfj.blog.common.security.filter.AuthorizationTokenFilter@671da0f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33b2ba25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f1fb139, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38445703, org.springframework.security.web.session.SessionManagementFilter@6c4d0224, org.springframework.security.web.access.ExceptionTranslationFilter@14d298d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4687366b]
+2024-06-04 14:57:24.816 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9090"]
+2024-06-04 14:57:24.895 [ main ] - [ INFO  ] [ o.s.boot.web.embedded.tomcat.TomcatWebServer : 220 ] - Tomcat started on port(s): 9090 (http) with context path ''
+2024-06-04 14:57:24.962 [ main ] - [ INFO  ] [ com.lfj.blog.WebBasicApplication : 61 ] - Started WebBasicApplication in 86.148 seconds (JVM running for 93.696)
+2024-06-04 14:57:24.993 [ main ] - [ INFO  ] [ com.corundumstudio.socketio.SocketIOServer : 146 ] - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-06-04 14:57:26.064 [ nioEventLoopGroup-7-1 ] - [ ERROR ] [ com.corundumstudio.socketio.SocketIOServer : 173 ] - SocketIO server start failed at port: 9974!
+2024-06-04 14:57:26.086 [ main ] - [ INFO  ] [ o.s.b.a.l.ConditionEvaluationReportLoggingListener : 136 ] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-06-04 14:57:26.395 [ main ] - [ ERROR ] [ org.springframework.boot.SpringApplication : 821 ] - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.lfj.blog.WebBasicApplication.main(WebBasicApplication.java:13)
+Caused by: java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:438)
+	at sun.nio.ch.Net.bind(Net.java:430)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+2024-06-04 16:46:31.579 [ background-preinit ] - [ INFO  ] [ org.hibernate.validator.internal.util.Version : 21 ] - HV000001: Hibernate Validator 6.2.5.Final
+2024-06-04 16:46:31.599 [ main ] - [ INFO  ] [ com.lfj.blog.WebBasicApplication : 55 ] - Starting WebBasicApplication using Java 1.8.0_333 on Vicissitudes with PID 45492 (C:\Users\16658\Documents\GitHub\blog-back-end\blog-springboot2\blog\target\classes started by 16658 in C:\Users\16658\Documents\GitHub\blog-back-end\blog-springboot2\blog)
+2024-06-04 16:46:31.600 [ main ] - [ INFO  ] [ com.lfj.blog.WebBasicApplication : 637 ] - The following 1 profile is active: "prod"
+2024-06-04 16:46:35.338 [ main ] - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 262 ] - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-04 16:46:35.344 [ main ] - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 132 ] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-04 16:46:35.466 [ main ] - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 201 ] - Finished Spring Data repository scanning in 88 ms. Found 0 Redis repository interfaces.
+2024-06-04 16:46:36.121 [ main ] - [ INFO  ] [ c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor : 50 ] - Post-processing PropertySource instances
+2024-06-04 16:46:36.376 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2024-06-04 16:46:36.380 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2024-06-04 16:46:36.381 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2024-06-04 16:46:36.382 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2024-06-04 16:46:36.382 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2024-06-04 16:46:36.382 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2024-06-04 16:46:36.383 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource Config resource 'class path resource [application-prod.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-06-04 16:46:36.383 [ main ] - [ INFO  ] [ c.u.j.EncryptablePropertySourceConverter : 38 ] - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2024-06-04 16:46:36.544 [ main ] - [ INFO  ] [ c.u.j.filter.DefaultLazyPropertyFilter : 31 ] - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2024-06-04 16:46:37.120 [ main ] - [ INFO  ] [ c.u.j.resolver.DefaultLazyPropertyResolver : 31 ] - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2024-06-04 16:46:37.120 [ main ] - [ INFO  ] [ c.u.j.detector.DefaultLazyPropertyDetector : 30 ] - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2024-06-04 16:46:37.126 [ main ] - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 376 ] - Bean 'socketIoProperties' of type [com.lfj.blog.common.chatSocketio.config.SocketIoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-04 16:46:37.133 [ main ] - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 376 ] - Bean 'socketIoConfig' of type [com.lfj.blog.common.chatSocketio.config.SocketIoConfig$$EnhancerBySpringCGLIB$$ae8c01e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-04 16:46:37.345 [ main ] - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 376 ] - Bean 'socketIOServer' of type [com.corundumstudio.socketio.SocketIOServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-04 16:46:38.100 [ main ] - [ INFO  ] [ o.s.boot.web.embedded.tomcat.TomcatWebServer : 108 ] - Tomcat initialized with port(s): 9090 (http)
+2024-06-04 16:46:38.136 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9090"]
+2024-06-04 16:46:38.137 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-06-04 16:46:38.138 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-06-04 16:46:38.543 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-06-04 16:46:38.544 [ main ] - [ INFO  ] [ o.s.b.w.s.c.ServletWebServerApplicationContext : 292 ] - Root WebApplicationContext: initialization completed in 6823 ms
+2024-06-04 16:46:38.755 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 32 ] - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2024-06-04 16:46:38.769 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2024-06-04 16:46:38.772 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2024-06-04 16:46:38.773 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2024-06-04 16:46:38.774 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2024-06-04 16:46:38.778 [ main ] - [ INFO  ] [ c.u.j.encryptor.DefaultLazyEncryptor : 58 ] - Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2024-06-04 16:46:40.019 [ main ] - [ INFO  ] [ org.redisson.Version : 41 ] - Redisson 3.17.0
+2024-06-04 16:46:42.195 [ redisson-netty-2-12 ] - [ INFO  ] [ o.r.connection.pool.MasterPubSubConnectionPool : 161 ] - 1 connections initialized for 101.37.165.220/101.37.165.220:6379
+2024-06-04 16:46:42.397 [ redisson-netty-2-19 ] - [ INFO  ] [ org.redisson.connection.pool.MasterConnectionPool : 161 ] - 24 connections initialized for 101.37.165.220/101.37.165.220:6379
+2024-06-04 16:46:46.464 [ main ] - [ INFO  ] [ c.c.socketio.annotation.SpringAnnotationScanner : 58 ] - chatMessageEventHandler bean listeners added
+2024-06-04 16:46:47.197 [ main ] - [ INFO  ] [ c.lfj.blog.common.limiter.aspect.RateLimiterAspect : 79 ] - RateLimterAspect[分布式限流处理器]脚本加载完成
+2024-06-04 16:46:47.437 [ main ] - [ WARN  ] [ org.thymeleaf.templatemode.TemplateMode : 150 ] - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2024-06-04 16:46:51.563 [ main ] - [ INFO  ] [ o.s.b.actuate.endpoint.web.EndpointLinksResolver : 58 ] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-06-04 16:46:51.965 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/*.html', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 16:46:51.967 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/*.html', GET]
+2024-06-04 16:46:51.969 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/favicon.ico', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 16:46:51.969 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/favicon.ico', GET]
+2024-06-04 16:46:51.969 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/**/*.html', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 16:46:51.969 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/**/*.html', GET]
+2024-06-04 16:46:51.969 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/**/*.css', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 16:46:51.969 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/**/*.css', GET]
+2024-06-04 16:46:51.970 [ main ] - [ WARN  ] [ o.s.s.config.annotation.web.builders.WebSecurity : 305 ] - You are asking Spring Security to ignore Ant [pattern='/**/*.js', GET]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-06-04 16:46:51.970 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 52 ] - Will not secure Ant [pattern='/**/*.js', GET]
+2024-06-04 16:46:52.114 [ main ] - [ INFO  ] [ o.s.security.web.DefaultSecurityFilterChain : 55 ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@574327ed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c7f2fdb, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f22fd5d, org.springframework.security.web.header.HeaderWriterFilter@1a947424, org.springframework.web.filter.CorsFilter@1b5cf611, org.springframework.security.web.authentication.logout.LogoutFilter@3e73f5e7, com.lfj.blog.common.security.filter.AuthorizationTokenFilter@39a3984c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44587c44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c4eae94, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d01ea33, org.springframework.security.web.session.SessionManagementFilter@f6cde7e, org.springframework.security.web.access.ExceptionTranslationFilter@20960b51, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ff53704]
+2024-06-04 16:46:54.951 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9090"]
+2024-06-04 16:46:54.979 [ main ] - [ INFO  ] [ o.s.boot.web.embedded.tomcat.TomcatWebServer : 220 ] - Tomcat started on port(s): 9090 (http) with context path ''
+2024-06-04 16:46:55.012 [ main ] - [ INFO  ] [ com.lfj.blog.WebBasicApplication : 61 ] - Started WebBasicApplication in 24.928 seconds (JVM running for 28.127)
+2024-06-04 16:46:55.030 [ main ] - [ INFO  ] [ com.corundumstudio.socketio.SocketIOServer : 146 ] - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2024-06-04 16:46:55.349 [ nioEventLoopGroup-7-1 ] - [ INFO  ] [ com.corundumstudio.socketio.SocketIOServer : 171 ] - SocketIO server started at port: 9974
+2024-06-04 16:46:56.344 [ RMI TCP Connection(1)-192.168.133.222 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-04 16:46:56.345 [ RMI TCP Connection(1)-192.168.133.222 ] - [ INFO  ] [ org.springframework.web.servlet.DispatcherServlet : 525 ] - Initializing Servlet 'dispatcherServlet'
+2024-06-04 16:46:56.346 [ RMI TCP Connection(2)-192.168.133.222 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2024-06-04 16:46:56.354 [ RMI TCP Connection(1)-192.168.133.222 ] - [ INFO  ] [ org.springframework.web.servlet.DispatcherServlet : 547 ] - Completed initialization in 8 ms
+2024-06-04 16:46:57.952 [ RMI TCP Connection(2)-192.168.133.222 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
