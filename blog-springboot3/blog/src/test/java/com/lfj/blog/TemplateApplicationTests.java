@@ -1,6 +1,8 @@
 package com.lfj.blog;
 
 import com.alibaba.fastjson2.JSON;
+import com.lfj.blog.utils.DateIntervalUtils;
+import com.lfj.blog.utils.FilesUtils;
 import com.lfj.blog.utils.buildTreeUtil.BuildTreeUtil;
 import com.lfj.blog.utils.buildTreeUtil.TreeVo;
 import lombok.AllArgsConstructor;
@@ -10,11 +12,18 @@ import org.jasypt.encryption.StringEncryptor;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
+import java.util.*;
 import java.util.stream.Collectors;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @SpringBootTest
 class TemplateApplicationTests {
@@ -33,6 +42,124 @@ class TemplateApplicationTests {
 			treeNodes.add(treeNode);
 		}
 		return treeNodes;
+	}
+
+
+	@Test
+	void matestin() {
+		// 当天
+		LocalDate now = LocalDate.now();
+
+		// 获取周一日期
+		LocalDate monday = now.with(TemporalAdjusters.previous(DayOfWeek.MONDAY));
+
+		// 近两周
+		// 获取上周一日期
+		LocalDate lastMonday = now.with(TemporalAdjusters.previous(DayOfWeek.MONDAY)).minusDays(7);
+
+		// 本月
+		// 获取本月一号日期
+		LocalDate firstDayOfMonth = now.with(TemporalAdjusters.firstDayOfMonth());
+
+		// 近三月
+		// 获取前两个月的第一天
+		LocalDate firstDayOfTwoMonthsAgo = now.minusMonths(2).with(TemporalAdjusters.firstDayOfMonth());
+
+
+		// 创建日期集合
+		List<LocalDate> dateRange = new ArrayList<>();
+
+		// 从上一个周一到当前日期（包括这两天）填充日期集合
+		LocalDate currentDate = firstDayOfMonth;
+		while (!currentDate.isAfter(now)) {
+			dateRange.add(currentDate);
+			currentDate = currentDate.plusDays(1);
+		}
+
+		System.out.println(dateRange);
+	}
+
+	@Test
+	void test() {
+
+		ArrayList<EquipmentGrowthTrendDTO> equipmentGrowthTrendDTOS = new ArrayList<>();
+
+		// 创建测试数据
+		EquipmentGrowthTrendDTO dto1 = new EquipmentGrowthTrendDTO();
+		dto1.setBusinessType(1);
+		dto1.setDay("2024-08-01");
+		dto1.setNewDevicesCount(10);
+
+		EquipmentGrowthTrendDTO dto2 = new EquipmentGrowthTrendDTO();
+		dto2.setBusinessType(2);
+		dto2.setDay("2024-08-02");
+		dto2.setNewDevicesCount(15);
+
+		EquipmentGrowthTrendDTO dto3 = new EquipmentGrowthTrendDTO();
+		dto3.setBusinessType(1);
+		dto3.setDay("2024-08-07");
+		dto3.setNewDevicesCount(20);
+
+		EquipmentGrowthTrendDTO dto4 = new EquipmentGrowthTrendDTO();
+		dto4.setBusinessType(1);
+		dto4.setDay("2024-08-010");
+		dto4.setNewDevicesCount(20);
+
+		EquipmentGrowthTrendDTO dto5 = new EquipmentGrowthTrendDTO();
+		dto5.setBusinessType(1);
+		dto5.setDay("2024-07-29");
+		dto5.setNewDevicesCount(20);
+
+
+		// 将测试数据添加到列表中
+		equipmentGrowthTrendDTOS.add(dto1);
+		equipmentGrowthTrendDTOS.add(dto2);
+		equipmentGrowthTrendDTOS.add(dto3);
+		equipmentGrowthTrendDTOS.add(dto4);
+		equipmentGrowthTrendDTOS.add(dto5);
+
+
+		Map<Integer, List<EquipmentGrowthTrendStatsDTO>> groupedResult = new LinkedHashMap<>();
+//		List<String> nearlyMonthDates = DateIntervalUtils.getNearlyMonthDates();
+		List<String> nearlyWeekDates = DateIntervalUtils.getNearlyWeekDates();
+
+		Set<Integer> businessTypes = new HashSet<>();
+
+		// 为每个业务类型创建一个空的EquipmentGrowthTrendStatsDTO列表
+		for (EquipmentGrowthTrendDTO dto : equipmentGrowthTrendDTOS) {
+			businessTypes.add(dto.getBusinessType());
+		}
+		for (Integer businessType : businessTypes) {
+			groupedResult.put(businessType, new ArrayList<>());
+		}
+
+		// 为每个日期和每个业务类型创建EquipmentGrowthTrendStatsDTO对象
+		for (String date : nearlyWeekDates) {
+			for (Integer businessType : businessTypes) {
+				EquipmentGrowthTrendStatsDTO stats = new EquipmentGrowthTrendStatsDTO();
+				stats.setDay(date);
+				stats.setNewDevicesCount(0); // 初始化新设备计数为0
+
+				// 添加到分组结果Map中
+				groupedResult.get(businessType).add(stats);
+			}
+		}
+
+		// 遍历equipmentGrowthTrendDTOS，更新对应的新设备计数
+		for (EquipmentGrowthTrendDTO dto : equipmentGrowthTrendDTOS) {
+			for (Integer businessType : businessTypes) {
+				if (dto.getBusinessType().equals(businessType)) {
+					for (EquipmentGrowthTrendStatsDTO stats : groupedResult.get(businessType)) {
+						if (stats.getDay().equals(dto.getDay())) {
+							stats.setNewDevicesCount(dto.getNewDevicesCount()); // 更新新设备计数
+							break;
+						}
+					}
+				}
+			}
+		}
+
+		System.out.println(groupedResult);
 	}
 
 	@Test
@@ -147,6 +274,54 @@ class TemplateApplicationTests {
 		System.out.println(
 				JSON.toJSONString(treeVos)
 		);
+
+	}
+
+	@Test
+	void test22() throws IOException {
+//
+//		String inputImagePath = "D:\\PCTMoveData\\Desktop\\1.png"; // 替换为你的输入图像路径
+//		String outputBMPPath = "D:\\PCTMoveData\\Desktop\\image.bmp"; // 替换为你的输出 BMP 文件路径
+//
+//		BMP bmpConverter = new BMP(inputImagePath, outputBMPPath);
+//
+//		System.out.println("转换完成，BMP 文件已保存到: " + outputBMPPath);
+
+//		 创建一个模拟的 MultipartFile 对象
+		MultipartFile multipartFile = mock(MultipartFile.class);
+
+		// 设置文件名
+		String originalFilename = "testfile.txt";
+		when(multipartFile.getOriginalFilename()).thenReturn(originalFilename);
+
+		// 模拟文件的内容
+		byte[] fileContent = "This is a test file".getBytes();
+		when(multipartFile.getInputStream()).thenReturn(new ByteArrayInputStream(fileContent));
+
+
+		// 调用 saveUploadedFile 方法
+		String s = FilesUtils.saveMultipartFile(multipartFile);
+		System.out.println(s);
+	}
+
+	@Data
+	public static class TestDTO {
+		private LocalDate date;
+		private Integer count;
+	}
+
+	@Data
+	class EquipmentGrowthTrendDTO {
+		Integer businessType;
+		String day;
+		Integer newDevicesCount;
+
+	}
+
+	@Data
+	class EquipmentGrowthTrendStatsDTO {
+		String day;
+		Integer newDevicesCount;
 
 	}
 
